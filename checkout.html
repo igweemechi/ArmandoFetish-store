@@ -34,7 +34,7 @@
 
         <div class="right">
             <h1>Checkout</h1>
-            <form action="https://script.google.com/macros/s/AKfycbzSKlU0L5HK5-MVr4Q2pskT1VX02H9FbDs9xZhFfED7bQbfjCdLUh6du3HtHImYnQAUKA/exec" method="post" name="checkout-form" class="form">
+            <form action="" method="post" name="contact-form" class="form">
                 <!-- <input type="text" name="full-name" placeholder="Full Name" id="">
                 <input type="text" name="phone-name" placeholder="Phone Number" id="">
                 <input type="text" name="email" placeholder="E-mail" id="">
@@ -85,12 +85,12 @@
                         Credit any of these listed accounts above
                         <br><br>
                         <img src="images/notice-logo.svg" alt="" width="15px">
-                        After Paying for the item, kindly send a screenshot of the carted item and proof of payment to this emall (Armandofetishtoys@gmail.com)
+                        To confirm your order kindly send proof of payment to this email (armandofetishtoys@gmail.com)
                     </span>
                     
                 </div>
-                <button class="buttonCheckout group" type="submit" value="Checkout" id="submit">CHECKOUT</button>
-<!--                 <input class="buttonCheckout group" type="submit" value="Checkout" id="submit"> -->
+                <!-- <button class="buttonCheckout group" type="submit"><a href="" class="buttonCheckout">CHECKOUT</a></button> -->
+                <input class="buttonCheckout group" type="submit" value="Checkout" id="submit">
                 <!-- <button class="buttonCheck">
                     Checkout
                 </button> -->
@@ -136,6 +136,18 @@
 
 <script src="Google Sheet.js"></script>
 <script src="checkout.js"></script>
+<!-- <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx7wLC25SOo7mPIYFHXBHTNRdKioiljJknJ6h55oO7EoiG8L90AOUlGJnZZtBz215xeOg/exec'
 
+const form = document.forms['checkout-form']
+    
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method:'POST', body: new FormData(form)})
+    .then(response => alert("Thank You! Your form is submitted successfully." ))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+})
+</script> -->
 </body>
 </html>

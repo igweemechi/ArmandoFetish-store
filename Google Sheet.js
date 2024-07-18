@@ -5,7 +5,7 @@ const form = document.forms['contact-form']
 form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => alert("Thank You! Your form is submitted successfully." ))
+    .then(response => alert("Thank You!for Shopping with ArmandoFetish Toys. You will get feedback on your mail to contiue" ))
     .then(() => { window.location.reload(); })
     .catch(error => console.error('Error!', error.message))
 })
